@@ -5,9 +5,6 @@
       INSTALLATION. SNOWMAN64S-GAMES.
       DATE-WRITTEN. 2026/05/14.
 
-      *> To compile the game using GnuCOBOL:
-      *> cobc -x -o "COBOL Game" main.cbl
-
       *> Initialize
       DATA DIVISION.
       WORKING-STORAGE SECTION. *> Variables

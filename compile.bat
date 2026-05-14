@@ -1,0 +1,1 @@
+cobc -x -o "COBOL Game" main.cbl
