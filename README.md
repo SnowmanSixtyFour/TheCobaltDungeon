@@ -29,4 +29,4 @@ Since the repository comes with [raylib.h](https://github.com/raysan5/raylib/blo
 # Copyright
 Copyright (c) 2026 Snowman64, under the [GNU General Public License v3.0](https://www.gnu.org/licenses/gpl-3.0.en.html).
 
-raylib is licensed under an [unmodified zlib/libpng license](https://www.raylib.com/license.html).
+raylib is free and open-source, licensed under the [zlib/libpng License](https://www.raylib.com/license.html).
