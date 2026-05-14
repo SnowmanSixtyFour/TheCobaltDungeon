@@ -1,1 +1,2 @@
 cobc -x -o "COBOL Game" main.cbl raylib.c -I. -L. -lraylib
+pause
