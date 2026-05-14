@@ -1,4 +1,4 @@
-#include "raylib.h"
+#include "include/raylib.h"
 
 void Initialize(int width, int height, const char* title) {
     InitWindow(width, height, title);

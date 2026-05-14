@@ -16,7 +16,7 @@ You can run [compile.bat](https://github.com/SnowmanSixtyFour/COBOLGame/blob/mai
 
 Alternatively, you can run this specific command in the directory of main.cbl to compile the game:
 
-``cobc -x -o "COBOL Game" main.cbl config.c -I. -L. -lraylib``
+``cobc -x -o "COBOL Game" main.cbl raylib.c -I. -L. -lraylib``
 
 The following instructions are used to compile the game into an executable file for your system.
 
