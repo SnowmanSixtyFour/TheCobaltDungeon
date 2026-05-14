@@ -1,1 +1,1 @@
-cobc -x -o "COBOL Game" main.cbl
+cobc -x -o "COBOL Game" main.cbl config.c -I. -L. -lraylib
