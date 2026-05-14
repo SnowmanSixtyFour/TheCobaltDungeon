@@ -20,6 +20,9 @@
 
       *> Code Processing
       PROCEDURE DIVISION.
+		   CALL "AllowResizing" *> Allow Window Resizing
+		   
+		   *> Initialize Window
            CALL "Initialize" USING BY VALUE SCREENWIDTH
                                    BY VALUE SCREENHEIGHT
                                    BY REFERENCE WINDOWNAME

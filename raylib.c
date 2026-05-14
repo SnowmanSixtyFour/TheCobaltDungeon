@@ -1,6 +1,11 @@
 #include "include/raylib.h"
 
-void Initialize(int width, int height, const char* title) {
+void AllowResizing()
+{
+    SetConfigFlags(FLAG_WINDOW_RESIZABLE);
+}
+
+void Initialize(int width, int height, const char* title, int allowResizing) {
     InitWindow(width, height, title);
 }
 
