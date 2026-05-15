@@ -46,16 +46,9 @@
                                     BY VALUE 128
                  
                  *> Set Text()
-                 CALL "Text" USING BY VALUE "Hello, world!"
+                 CALL "Text" USING BY VALUE "The Cobalt Dungeon is a WIP game! Check back later."
                          BY VALUE 10    *> X
                          BY VALUE 10    *> Y
-                         BY VALUE 20    *> Size
-      
-                 *> Text Colour (R,G,B,A)
-                         BY VALUE 255
-                         BY VALUE 255
-                         BY VALUE 255
-                         BY VALUE 255
 
               CALL "EndTarget"
               
@@ -77,7 +70,7 @@
               CALL "WindowClose" RETURNING CLOSED
            END-PERFORM
 
-           CALL "UnloadTarget" *> Stop Drawing Boundaries
+           CALL "Unload" *> Unload Assets
 
            GOBACK.
       END PROGRAM COBALTDUNGEON.

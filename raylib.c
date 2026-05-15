@@ -1,15 +1,21 @@
+// Wrapper to pull from raylib
+
 #include "include/raylib.h"
 
 #define MAX(a, b) ((a)>(b)? (a) : (b))
 #define MIN(a, b) ((a)<(b)? (a) : (b))
 
 // Variables
+
 RenderTexture2D target;
+
+Font font;
 
 const int
     screenWidth = 844,
-    screenHeight = 480;
-
+    screenHeight = 480,
+    
+    fontSize = 48;
 float scale = 1.0f;
 
 // Window Properties
@@ -23,6 +29,9 @@ void Initialize(int width, int height, const char* title, int allowResizing)
 {
     // Initialize Window Variables
     InitWindow(width, height, title);
+    
+    // Set Variables
+    font = LoadFontEx("assets/fonts/calibri.ttf", fontSize, 0, 250);
 }
 
 void Update()
@@ -72,9 +81,14 @@ void EndTarget()
     EndTextureMode();
 }
 
-void UnloadTarget()
+void Unload()
 {
-    UnloadRenderTexture(target);
+    // Unload Variables
+    
+    UnloadRenderTexture(target); // Render Target
+    
+    // Fonts
+    UnloadFont(font);
 }
 
 void Draw()
@@ -93,8 +107,15 @@ void Clear(int r, int g, int b, int a)
     ClearBackground(color);
 }
 
-void Text(const char* text, int x, int y, int fontSize, int r, int g, int b, int a)
+// Defined Text
+void CustomText(const char* text, int x, int y, int r, int g, int b, int a)
 {
     Color color = { (unsigned char)r, (unsigned char)g, (unsigned char)b, (unsigned char)a };
-    DrawText(text, x, y, fontSize, color);
+    DrawTextEx(font, text, (Vector2){x, y}, 20, 2, color);
+}
+
+// Pre-Defined Text
+void Text(const char* text, int x, int y)
+{
+    DrawTextEx(font, text, (Vector2){x, y}, 20, 2, WHITE);
 }
