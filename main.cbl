@@ -9,9 +9,9 @@
       DATA DIVISION.
       WORKING-STORAGE SECTION. *> Variables
               *> Window
-              01 SCREENWIDTH    PIC 9(4)    VALUE 844.
-              01 SCREENHEIGHT   PIC 9(4)    VALUE 480.
-              01 WINDOWNAME     PIC X(20)   VALUE "COBOL Game".
+              01 SCREEN-WIDTH    PIC 9(4)    VALUE 844.
+              01 SCREEN-HEIGHT   PIC 9(4)    VALUE 480.
+              01 WINDOW-NAME     PIC X(20)   VALUE "COBOL Game".
 
               *> Properties
               01 CLOSED         PIC S9(4)   VALUE 0. *> Window Closed
@@ -23,9 +23,9 @@
 		   CALL "AllowResizing" *> Allow Window Resizing
 		   
 		   *> Initialize Window
-           CALL "Initialize" USING BY VALUE SCREENWIDTH
-                                   BY VALUE SCREENHEIGHT
-                                   BY REFERENCE WINDOWNAME
+           CALL "Initialize" USING BY VALUE SCREEN-WIDTH
+                                   BY VALUE SCREEN-HEIGHT
+                                   BY REFERENCE WINDOW-NAME
 
            PERFORM UNTIL CLOSED = 1 *> Run while Window Open
               CALL "Draw" *> Begin Drawing
