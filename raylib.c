@@ -32,6 +32,14 @@ void Initialize(int width, int height, const char* title, int allowResizing)
     
     // Set Variables
     font = LoadFontEx("assets/fonts/calibri.ttf", fontSize, 0, 250);
+
+    // Log
+
+    const char* beginMsg =
+    "\n~|~|_|[~  |~/~\\|~)|~|| ~|~  |~\\| ||\\ ||~_[~/~\\|\\ |\n | | |[_  |_\\_/|_)|~||_ |   |_/|_|| \\||_|[_\\_/| \\|";
+    // ASCII Art (Formatted to work in Char Array)
+
+    TraceLog(LOG_INFO, beginMsg); // Write Log
 }
 
 void Update()
