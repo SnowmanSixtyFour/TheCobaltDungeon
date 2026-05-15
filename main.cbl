@@ -1,5 +1,5 @@
       IDENTIFICATION DIVISION.
-      PROGRAM-ID.  COBOLGAME.
+      PROGRAM-ID.  COBALTDUNGEON.
 
       AUTHOR. SNOWMAN64.
       INSTALLATION. SNOWMAN64S-GAMES.
@@ -14,7 +14,7 @@
               *> Window
               01 SCREEN-WIDTH    PIC 9(4)    VALUE 844.
               01 SCREEN-HEIGHT   PIC 9(4)    VALUE 480.
-              01 WINDOW-NAME     PIC X(20)   VALUE "COBOL Game".
+              01 WINDOW-NAME     PIC X(20)   VALUE "The Cobalt Dungeon".
 
               *> Properties
               01 CLOSED         PIC S9(4)   VALUE 0. *> Window Closed
@@ -80,4 +80,4 @@
            CALL "UnloadTarget" *> Stop Drawing Boundaries
 
            GOBACK.
-      END PROGRAM COBOLGAME.
+      END PROGRAM COBALTDUNGEON.

@@ -1,6 +1,6 @@
-# COBOL Game
+# The Cobalt Dungeon
 
-COBOL Game is licensed under the [GNU General Public License v3.0](https://www.gnu.org/licenses/gpl-3.0.en.html).
+The Cobalt Dungeon is licensed under the [GNU General Public License v3.0](https://www.gnu.org/licenses/gpl-3.0.en.html).
 
 [raylib](https://www.raylib.com) is licensed under the [zlib/libpng License](https://www.raylib.com/license.html).
 
