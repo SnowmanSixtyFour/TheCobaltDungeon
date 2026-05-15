@@ -5,6 +5,9 @@
       INSTALLATION. SNOWMAN64S-GAMES.
       DATE-WRITTEN. 2026/05/14.
 
+      *> Special Thanks
+      *> raylib Core Example: Window Letterbox - anatagawa
+
       *> Initialize
       DATA DIVISION.
       WORKING-STORAGE SECTION. *> Variables
@@ -19,39 +22,62 @@
               01 INPUT-KEY      PIC X.
 
       *> Code Processing
-      PROCEDURE DIVISION.
-		   CALL "AllowResizing" *> Allow Window Resizing
-		   
-		   *> Initialize Window
+      PROCEDURE DIVISION.   
+           *> Initialize Window
+           CALL "SetProperties" *> Set Window Properties
+           
            CALL "Initialize" USING BY VALUE SCREEN-WIDTH
                                    BY VALUE SCREEN-HEIGHT
                                    BY REFERENCE WINDOW-NAME
+           CALL "CreateTarget"
+           
+           CALL "SetFPS" USING BY VALUE 60 *> Set FPS
 
            PERFORM UNTIL CLOSED = 1 *> Run while Window Open
-              CALL "Draw" *> Begin Drawing
+              CALL "Update" *> Update Variables
               
-              *> Set Background Colour (R,G,B,A)
-              CALL "Clear" USING BY VALUE 128
-                                 BY VALUE 128
-                                 BY VALUE 128
-                                 BY VALUE 128
+              *> Inside Game Boundaries
+              CALL "StartTarget"
+                
+                 *> Set Background Colour (R,G,B,A)
+                 CALL "Clear" USING BY VALUE 128
+                                    BY VALUE 128
+                                    BY VALUE 128
+                                    BY VALUE 128
+                 
+                 *> Set Text()
+                 CALL "Text" USING BY VALUE "Hello, world!"
+                         BY VALUE 10    *> X
+                         BY VALUE 10    *> Y
+                         BY VALUE 20    *> Size
+      
+                 *> Text Colour (R,G,B,A)
+                         BY VALUE 255
+                         BY VALUE 255
+                         BY VALUE 255
+                         BY VALUE 255
+
+              CALL "EndTarget"
               
-              CALL "Text" USING BY VALUE "Hello, world!"
-                                BY VALUE 10    *> X
-                                BY VALUE 10    *> Y
-                                BY VALUE 20    *> Size
-
-                        *> Text Colour (R,G,B,A)
-                                BY VALUE 255
-                                BY VALUE 255
-                                BY VALUE 255
-                                BY VALUE 255
-
-              CALL "End" *> End of Draw
+              *> Begin Drawing
+              CALL "Draw"
+              
+                 *> Set Background Colour (Black)
+                 CALL "Clear" USING BY VALUE 0
+                                    BY VALUE 0
+                                    BY VALUE 0
+                                    BY VALUE 0
+      
+                 CALL "DrawTarget" *> Draw Game Boundaries
+              
+              *> End of Draw
+              CALL "End"
 
               *> Close Game When Window Closed
               CALL "WindowClose" RETURNING CLOSED
            END-PERFORM
+
+           CALL "UnloadTarget" *> Stop Drawing Boundaries
 
            GOBACK.
       END PROGRAM COBOLGAME.

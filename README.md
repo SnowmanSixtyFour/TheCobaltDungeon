@@ -26,6 +26,10 @@ As stated, this game was also made with the [raylib](https://www.raylib.com/) li
 
 Since the repository comes with [raylib.h](https://github.com/raysan5/raylib/blob/master/src/raylib.h) and [raylib.dll](https://github.com/raysan5/raylib/releases/download/2.6.0/raylib-2.6.0-Win64-msvc15.zip), they are not required to  be manually set up.
 
+## Special Thanks
+
+[raylib Core Example: Window Letterbox](https://github.com/raysan5/raylib/blob/master/examples/core/core_window_letterbox.c) - anatagawa
+
 # Copyright
 Copyright (c) 2026 Snowman64, under the [GNU General Public License v3.0](https://www.gnu.org/licenses/gpl-3.0.en.html).
 
