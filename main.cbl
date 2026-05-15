@@ -39,10 +39,9 @@
               *> Inside Game Boundaries
               CALL "StartTarget"
                 
-                 *> Set Background Colour (R,G,B,A)
-                 CALL "Clear" USING BY VALUE 128
-                                    BY VALUE 128
-                                    BY VALUE 128
+                 *> Set Background Colour (R,G,B)
+                 CALL "Clear" USING BY VALUE 44
+                                    BY VALUE 52
                                     BY VALUE 128
                  
                  *> Set Text()

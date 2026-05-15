@@ -101,7 +101,13 @@ void End()
     EndDrawing();
 }
 
-void Clear(int r, int g, int b, int a)
+void Clear(int r, int g, int b)
+{
+    Color color = { (unsigned char)r, (unsigned char)g, (unsigned char)b, 255};
+    ClearBackground(color);
+}
+
+void ClearAlpha(int r, int g, int b, int a)
 {
     Color color = { (unsigned char)r, (unsigned char)g, (unsigned char)b, (unsigned char)a };
     ClearBackground(color);
