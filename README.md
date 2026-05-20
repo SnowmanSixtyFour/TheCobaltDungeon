@@ -16,8 +16,7 @@ To download the latest version of The Cobalt Dungeon, view [Releases](https://gi
 Additionally, if you wish to create your own release after compiling, place The Cobalt Dungeon.exe, raylib.dll, and the assets folder all in the same directory.
 ```
 ├── assets
-│   └── fonts
-│       └── calibri.ttf
+│   └── ...
 ├── raylib.dll
 └── The Cobalt Dungeon.exe
 ```
@@ -45,7 +44,7 @@ Since the repository comes with [raylib.h](https://github.com/raysan5/raylib/blo
 
 ## Special Thanks
 
-[raylib Core Example: Window Letterbox](https://github.com/raysan5/raylib/blob/master/examples/core/core_window_letterbox.c) - anatagawa
+[raylib Core Example: Window Letterbox](https://github.com/raysan5/raylib/blob/master/examples/core/core_window_letterbox.c)
 
 # Copyright
 Copyright (c) 2026 Snowman64, under the [GNU General Public License v3.0](https://www.gnu.org/licenses/gpl-3.0.en.html).
